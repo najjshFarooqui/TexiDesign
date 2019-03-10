@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              xmlns:tools="http://schemas.android.com/tools"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent"
+              android:layout_marginTop="24dp"
+              android:layout_marginRight="16dp"
+              android:layout_marginLeft="16dp"
+              android:orientation="vertical"
+              tools:context=".MainActivity">
+
+
+    <ImageView android:layout_width="150dp"
+               android:layout_height="150dp"
+               android:src="@drawable/ola"/>
+
+    <TextView android:layout_width="wrap_content"
+              android:text="welcome \nabroad"
+              android:textStyle="bold"
+              android:textColor="#000"
+              android:textSize="32sp"
+              android:layout_height="wrap_content"/>
+
+
+    <TextView android:layout_width="wrap_content"
+              android:layout_height="wrap_content"
+              android:textSize="24sp"
+              android:layout_marginTop="125dp"
+              android:textColor="#000"
+              android:text="Explore new ways to \ntravel with Ola"/>
+
+    <TextView android:layout_width="wrap_content"
+              android:text="please enter your mobile number to proceed"
+              android:layout_marginTop="16dp"
+              android:layout_height="wrap_content"/>
+
+
+    <LinearLayout android:layout_width="match_parent"
+                  android:layout_height="wrap_content"
+                  android:orientation="horizontal">
+        <Spinner android:layout_width="wrap_content"
+                 android:layout_height="match_parent"
+                 android:prompt="@string/spinner_title"
+                 android:id="@+id/countrySpinner">
+        </Spinner>
+        <android.support.design.widget.TextInputLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp">
+
+            <EditText
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="Your Number"
+                    android:id="@+id/etNumber"/>
+
+        </android.support.design.widget.TextInputLayout>
+    </LinearLayout>
+
+</LinearLayout>

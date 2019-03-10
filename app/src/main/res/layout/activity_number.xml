@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_margin="16dp"
+        android:orientation="vertical"
+        tools:context=".NumberActivity">
+
+    <ImageView android:layout_width="wrap_content"
+               android:layout_height="wrap_content"
+               android:id="@+id/back"
+               android:src="@drawable/ic_arrow"/>
+
+    <TextView android:layout_width="wrap_content"
+              android:layout_height="wrap_content"
+              android:layout_marginTop="48dp"
+              android:text="please enter your mobile \nnumber to proceed"
+              android:textStyle="normal"
+              android:textColor="#000"
+              android:textSize="24sp"/>
+
+    <LinearLayout android:layout_width="match_parent"
+                  android:orientation="horizontal"
+                  android:layout_height="wrap_content">
+
+        <Spinner android:layout_width="wrap_content"
+                 android:layout_height="wrap_content"
+                 android:prompt="@string/spinner_title"
+                 android:id="@+id/countrySpinner">
+        </Spinner>
+        <android.support.design.widget.TextInputLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp">
+
+            <EditText
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="Your Number"
+                    android:inputType="phone"
+                    android:id="@+id/etNumber"/>
+
+        </android.support.design.widget.TextInputLayout>
+
+
+    </LinearLayout>
+
+    <Button android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="240dp"
+            android:id="@+id/nxtButton"
+            android:text="Next"/>
+
+
+</LinearLayout>

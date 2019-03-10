@@ -1,0 +1,10 @@
+<resources>
+    <string name="app_name">Texi Design</string>
+    <string name="spinner_title">select country</string>
+    <string-array name="Country_list">
+        <item>Mercury</item>
+        <item>India</item>
+        <item>Pakistan</item>
+        <item>Australia</item>
+    </string-array>
+</resources>
