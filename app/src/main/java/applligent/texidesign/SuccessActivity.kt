@@ -13,7 +13,7 @@ class SuccessActivity : AppCompatActivity() {
 
         val varContinue: TextView = findViewById(R.id.tvContinue)
         varContinue.setOnClickListener {
-            val intent = Intent(this@SuccessActivity, HomeActivity::class.java)
+            val intent = Intent(this@SuccessActivity, MapsActivity::class.java)
             startActivity(intent)
 
 

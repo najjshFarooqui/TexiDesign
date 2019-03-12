@@ -2,7 +2,7 @@
 <LinearLayout
         xmlns:android="http://schemas.android.com/apk/res/android"
         android:layout_width="match_parent"
-        android:layout_height="192dp"
+        android:layout_height="wrap_content"
         android:background="?attr/colorPrimaryDark"
         android:padding="16dp"
         android:theme="@style/ThemeOverlay.AppCompat.Dark"
@@ -15,12 +15,14 @@
             android:text="My Profile"
             android:textStyle="bold"
             android:textSize="24sp"
+            android:id="@+id/user_name"
             android:textAppearance="@style/TextAppearance.AppCompat.Body1"/>
 
     <TextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="number"
+            android:id="@+id/user_num"
             android:textStyle="bold"
             android:textSize="20sp"
             android:textAppearance="@style/TextAppearance.AppCompat.Body1"/>
