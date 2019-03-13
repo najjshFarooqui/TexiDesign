@@ -1,59 +1,70 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout
+<RelativeLayout
         xmlns:android="http://schemas.android.com/apk/res/android"
         xmlns:tools="http://schemas.android.com/tools"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:layout_margin="16dp"
-        android:orientation="vertical"
         tools:context=".NumberActivity">
 
-    <ImageView android:layout_width="wrap_content"
-               android:layout_height="wrap_content"
-               android:id="@+id/back"
-               android:src="@drawable/ic_arrow"/>
+    <RelativeLayout android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/yyy">
 
-    <TextView android:layout_width="wrap_content"
-              android:layout_height="wrap_content"
-              android:layout_marginTop="48dp"
-              android:text="please enter your mobile \nnumber to proceed"
-              android:textStyle="normal"
-              android:textColor="#000"
-              android:textSize="24sp"/>
+        <ImageView android:layout_width="wrap_content"
+                   android:layout_height="wrap_content"
+                   android:id="@+id/back"
+                   android:layout_alignParentLeft="true"
+                   android:layout_alignParentTop="true"
+                   android:layout_marginTop="16dp"
+                   android:src="@drawable/ic_arrow"/>
 
-    <LinearLayout android:layout_width="match_parent"
-                  android:orientation="horizontal"
+        <TextView android:layout_width="wrap_content"
                   android:layout_height="wrap_content"
-                  android:layout_marginTop="24dp">
+                  android:layout_below="@+id/back"
+                  android:id="@+id/tvBanner"
+                  android:text="please enter your mobile \nnumber to proceed"
+                  android:textStyle="normal"
+                  android:textColor="@color/textColorNormal"
+                  android:layout_marginTop="16dp"
+                  android:textSize="24sp"/>
 
-        <Button android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:id="@+id/btnId"
-                android:background="#EEEEEE"/>
+        <LinearLayout android:layout_width="match_parent"
+                      android:orientation="horizontal"
+                      android:layout_height="wrap_content"
+                      android:id="@+id/fields"
+                      android:layout_marginTop="24dp"
+                      android:layout_below="@+id/tvBanner">
+
+            <Button android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/btnId"
+                    android:background="#EEEEEE"/>
 
 
-        <EditText
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:hint="Your Number"
-                android:inputType="phone"
-                android:id="@+id/etNumber"/>
-        <android.support.v7.widget.RecyclerView
-                android:layout_width="match_parent"
-                android:id="@+id/countryView"
-                android:layout_height="wrap_content"/>
+            <EditText
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="Your Number"
+                    android:inputType="phone"
+                    android:id="@+id/etNumber"/>
+        </LinearLayout>
+    </RelativeLayout>
 
 
-
-    </LinearLayout>
+    <android.support.v7.widget.RecyclerView
+            android:layout_width="match_parent"
+            android:id="@+id/countryView"
+            android:layout_below="@+id/yyy"
+            android:background="#efe2f6"
+            android:layout_height="wrap_content"/>
 
     <Button android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginTop="240dp"
+            android:layout_alignParentBottom="true"
             android:background="@color/buttonColor"
             android:textColor="@color/btnTextColor"
             android:id="@+id/nxtButton"
             android:text="Next"/>
 
 
-</LinearLayout>
+</RelativeLayout>

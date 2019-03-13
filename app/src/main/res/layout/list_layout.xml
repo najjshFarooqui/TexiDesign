@@ -1,36 +1,36 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-              android:layout_width="match_parent"
-              android:layout_height="wrap_content"
-              android:orientation="vertical">
-
-
-    <android.support.v7.widget.CardView
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_margin="5dp">
-
-        <LinearLayout
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:orientation="vertical">
+                android:background=" #fbfcfc "
+                android:id="@+id/xxxx">
 
-            <TextView
-                    android:id="@+id/textViewUsername"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:padding="5dp"
-                    android:text="Belal Khan"
-                    android:textAppearance="@style/Base.TextAppearance.AppCompat.Large"/>
+    <ImageView android:layout_width="35dp"
+               android:layout_height="30dp"
+               android:id="@+id/countryIcon"
+               android:padding="5dp"
+               android:layout_marginLeft="10dp"
+               android:layout_marginTop="2dp"
+               android:layout_alignParentLeft="true"
+               android:layout_alignParentTop="true"/>
 
-            <TextView
-                    android:id="@+id/textViewAddress"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:padding="5dp"
-                    android:text="Ranchi, Jharkhand"
-                    android:textAppearance="@style/Base.TextAppearance.AppCompat.Medium"/>
-        </LinearLayout>
-    </android.support.v7.widget.CardView>
 
-</LinearLayout>
+    <TextView android:layout_width="wrap_content"
+              android:layout_alignParentRight="true"
+              android:id="@+id/tvCode"
+              android:text="+91"
+              android:textSize="18sp"
+              android:padding="10dp"
+              android:layout_marginRight="10dp"
+              android:layout_height="wrap_content"/>
+
+    <TextView android:layout_width="wrap_content"
+              android:layout_marginLeft="60dp"
+              android:id="@+id/tvCountry"
+              android:text="India"
+              android:padding="10dp"
+              android:textSize="18sp"
+              android:textColor="@color/textColorNormal"
+              android:layout_height="wrap_content"/>
+
+</RelativeLayout>

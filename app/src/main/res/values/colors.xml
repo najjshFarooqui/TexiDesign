@@ -5,4 +5,7 @@
     <color name="colorAccent">#dee732</color>
     <color name="buttonColor">#202020</color>
     <color name="btnTextColor">#D4DB28</color>
+    <color name="textColorNormal">#000</color>
+    <color name="recyclerColor">#e1c4f2</color>
+    <color name="terms">#1247ee</color>
 </resources>

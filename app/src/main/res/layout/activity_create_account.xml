@@ -52,13 +52,12 @@
               android:layout_marginTop="4dp"
               android:id="@+id/olaConditions"
               android:text="Ola's Terms and Conditions"
-              android:textColor="@color/colorPrimaryDark"
+              android:textColor="@color/terms"
     />
 
 
     <Button android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginTop="120dp"
             android:id="@+id/regButton"
             android:background="@color/buttonColor"
             android:textColor="@color/btnTextColor"
