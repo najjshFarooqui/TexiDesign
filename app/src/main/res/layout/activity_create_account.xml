@@ -1,66 +1,75 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout
+<RelativeLayout
         xmlns:android="http://schemas.android.com/apk/res/android"
         xmlns:tools="http://schemas.android.com/tools"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:orientation="vertical"
-        android:layout_marginTop="16dp"
-        android:layout_marginLeft="24dp"
-        android:layout_marginRight="24dp"
-
         tools:context=".CreateAccountActivity">
+    <LinearLayout android:layout_width="match_parent"
+                  android:layout_height="wrap_content"
+                  android:layout_margin="16dp"
+                  android:orientation="vertical">
 
-    <ImageView android:layout_width="wrap_content"
-               android:layout_height="wrap_content"
-               android:src="@drawable/ic_arrow"/>
+        <ImageView android:layout_width="wrap_content"
+                   android:layout_height="wrap_content"
+                   android:layout_alignParentLeft="true"
+                   android:layout_alignParentTop="true"
+                   android:layout_marginTop="10dp"
+                   android:id="@+id/backBtn"
+                   android:src="@drawable/ic_arrow"/>
 
-    <TextView android:layout_width="wrap_content"
-              android:layout_height="wrap_content"
-              android:text="Create your account "
-              android:textSize="24sp"
-              android:textColor="#000"
-              android:layout_marginTop="10dp"
-              android:id="@+id/tvNumber"/>
+        <TextView android:layout_width="wrap_content"
+                  android:layout_height="wrap_content"
+                  android:text="Create your account "
+                  android:textSize="24sp"
+                  android:textColor="#000"
+                  android:layout_marginTop="24dp"
+                  android:layout_below="@+id/backBtn"
+                  android:id="@+id/tvNumber"/>
 
-    <EditText android:layout_width="match_parent"
-              android:layout_height="wrap_content"
-              android:layout_marginTop="24dp"
-              android:id="@+id/etName"
-              android:hint="Full Name"/>
+        <EditText android:layout_width="match_parent"
+                  android:layout_height="wrap_content"
+                  android:id="@+id/etName"
+                  android:layout_below="@+id/tvNumber"
+                  android:hint="Full Name"/>
 
-    <EditText android:layout_width="match_parent"
-              android:layout_height="wrap_content"
-              android:layout_marginTop="10dp"
-              android:inputType="textEmailAddress"
-              android:id="@+id/etEmail"
-              android:hint="Email(Optional)"/>
-    <EditText android:layout_width="match_parent"
-              android:layout_height="wrap_content"
-              android:layout_marginTop="10dp"
-              android:inputType="number"
-              android:id="@+id/etCode"
-              android:hint="Referral Code (Optional)"/>
+        <EditText android:layout_width="match_parent"
+                  android:layout_height="wrap_content"
+                  android:layout_marginTop="10dp"
+                  android:inputType="textEmailAddress"
+                  android:layout_below="@+id/etName"
+                  android:id="@+id/etEmail"
+                  android:hint="Email(Optional)"/>
+        <EditText android:layout_width="match_parent"
+                  android:layout_height="wrap_content"
+                  android:inputType="number"
+                  android:layout_below="@+id/etEmail"
+                  android:id="@+id/etCode"
+                  android:hint="Referral Code (Optional)"/>
 
-    <TextView android:layout_width="wrap_content"
-              android:layout_height="wrap_content"
-              android:layout_marginTop="16dp"
-              android:text="By registering, you are agreeing to"
-    />
-    <TextView android:layout_width="wrap_content"
-              android:layout_height="wrap_content"
-              android:layout_marginTop="4dp"
-              android:id="@+id/olaConditions"
-              android:text="Ola's Terms and Conditions"
-              android:textColor="@color/terms"
-    />
+        <TextView android:layout_width="wrap_content"
+                  android:layout_height="wrap_content"
+                  android:layout_marginTop="16dp"
+                  android:id="@+id/text"
+                  android:layout_below="@+id/etCode"
+                  android:text="By registering, you are agreeing to"
+        />
+        <TextView android:layout_width="wrap_content"
+                  android:layout_height="wrap_content"
+                  android:layout_marginTop="4dp"
+                  android:id="@+id/olaConditions"
+                  android:text="Ola's Terms and Conditions"
+                  android:textColor="@color/terms"
+                  android:layout_below="@+id/text"/>
+    </LinearLayout>
 
 
     <Button android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:id="@+id/regButton"
+            android:layout_alignParentBottom="true"
             android:background="@color/buttonColor"
             android:textColor="@color/btnTextColor"
             android:text="Register"/>
 
-</LinearLayout>
+</RelativeLayout>

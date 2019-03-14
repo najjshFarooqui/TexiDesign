@@ -8,25 +8,35 @@ import android.support.v7.widget.RecyclerView
 import android.text.Editable
 import android.text.TextWatcher
 import android.view.View
-import android.widget.Button
-import android.widget.EditText
-import android.widget.ImageView
-import android.widget.LinearLayout
+import android.widget.*
 
 
 class NumberActivity : AppCompatActivity() {
+
+    lateinit var etNumber: EditText
+    lateinit var nxtButton: Button
+    lateinit var countryIcon: ImageView
+    lateinit var countryCode: TextView
+
+    lateinit var adapter: CustomAdapter
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_number)
         val countryView: RecyclerView = findViewById(R.id.countryView)
-        val countryCodeButton: Button = findViewById(R.id.btnId)
-
+        val linearLayout: LinearLayout = findViewById(R.id.lLayout)
+        etNumber = findViewById(R.id.etNumber)
+        nxtButton = findViewById(R.id.nxtButton)
+        countryIcon = findViewById(R.id.countryIcon)
+        countryCode = findViewById(R.id.countryCode)
 
         countryView.visibility = View.INVISIBLE
 
 
-        countryCodeButton.setOnClickListener {
+        linearLayout.setOnClickListener {
+            etNumber.visibility = View.INVISIBLE
+            nxtButton.visibility = View.INVISIBLE
+            linearLayout.visibility = View.INVISIBLE
             countryView.visibility = View.VISIBLE
 
 
@@ -57,14 +67,21 @@ class NumberActivity : AppCompatActivity() {
             countries.add(Countries("Pakistan", "+92"))
             countries.add(Countries("Australia", "+08"))
             countries.add(Countries("Canada", "+02"))
-            val adapter = CustomAdapter(countries)
+            adapter = CustomAdapter(countries)
             countryView.adapter = adapter
 
 
         }
+        countryView.setOnClickListener {
+            etNumber.visibility = View.VISIBLE
+            nxtButton.visibility = View.VISIBLE
+            linearLayout.visibility = View.VISIBLE
+            countryView.visibility = View.INVISIBLE
 
-        val etNumber: EditText = findViewById(R.id.etNumber)
-        val nxtButton: Button = findViewById(R.id.nxtButton)
+
+        }
+
+
 
         etNumber.addTextChangedListener(object : TextWatcher {
 

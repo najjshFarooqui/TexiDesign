@@ -35,10 +35,23 @@
                       android:layout_marginTop="24dp"
                       android:layout_below="@+id/tvBanner">
 
-            <Button android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:id="@+id/btnId"
-                    android:background="#EEEEEE"/>
+            <LinearLayout android:layout_width="wrap_content"
+                          android:layout_height="wrap_content"
+                          android:orientation="horizontal"
+                          android:id="@+id/lLayout">
+
+                <ImageView android:layout_width="40dp"
+                           android:layout_height="40dp"
+                           android:id="@+id/countryIcon"
+                           android:src="@drawable/india"/>
+                <TextView android:layout_width="wrap_content"
+                          android:layout_height="wrap_content"
+                          android:paddingTop="5dp"
+                          android:textSize="22sp"
+                          android:id="@+id/countryCode"
+                          android:textColor="@color/textColorNormal"
+                          android:text="+91"/>
+            </LinearLayout>
 
 
             <EditText
@@ -46,6 +59,7 @@
                     android:layout_height="wrap_content"
                     android:hint="Your Number"
                     android:inputType="phone"
+                    android:textColor="@color/textColorNormal"
                     android:id="@+id/etNumber"/>
         </LinearLayout>
     </RelativeLayout>

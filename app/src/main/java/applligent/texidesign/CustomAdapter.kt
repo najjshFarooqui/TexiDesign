@@ -31,6 +31,7 @@ class CustomAdapter(val userList: ArrayList<Countries>) : RecyclerView.Adapter<C
         lateinit var imageFlag: ImageView
         lateinit var textCountry: TextView
         lateinit var textViewCode: TextView
+
         fun bindItems(countries: Countries) {
             imageFlag = itemView.findViewById(R.id.countryIcon)
 
