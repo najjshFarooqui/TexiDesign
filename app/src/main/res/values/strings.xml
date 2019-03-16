@@ -17,4 +17,16 @@
     <string name="title_activity_maps">Map</string>
     <string name="map_btn1">Ride later</string>
     <string name="map_btn2">Ride now</string>
+
+
+    <!-- car icon names -->
+    <string name="auto">Auto</string>
+    <string name="mini">Mini</string>
+    <string name="micro">Micro</string>
+    <string name="sedan">Sedan</string>
+    <string name="rentals">Rentals</string>
+
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
 </resources>

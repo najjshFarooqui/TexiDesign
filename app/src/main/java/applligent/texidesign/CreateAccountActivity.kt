@@ -20,7 +20,7 @@ class CreateAccountActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_create_account)
         val i: Intent = intent
-        val number: String = i.extras.getString("number", "")
+        val number: String = i.extras.getString("getNumber", "")
         val tvNumber: TextView = findViewById(R.id.tvNumber)
         tvNumber.text = number
 

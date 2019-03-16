@@ -13,5 +13,21 @@
                 android:id="@+id/book_rides"
                 android:icon="@drawable/choose_ride"
                 android:title="Book Your Ride"/>
+
+
+        <item
+                android:id="@+id/ola_pass"
+                android:icon="@drawable/ola_pass"
+                android:title="ola pass"/>
+        <item
+                android:id="@+id/share_pass"
+                android:icon="@drawable/ic_chrome_reader_mode_black_24dp"
+                android:title="Share pass"/>
+        <item
+                android:id="@+id/book_rides"
+                android:icon="@drawable/choose_ride"
+                android:title="Book Your Ride"/>
     </group>
+
+
 </menu>

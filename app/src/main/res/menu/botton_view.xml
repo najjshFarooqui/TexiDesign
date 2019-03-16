@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item android:id="@+id/micro"
+          android:title="@string/micro"
+          android:icon="@drawable/micro"/>
+
+
+    <item android:id="@+id/mini"
+          android:title="@string/mini"
+
+          android:icon="@drawable/mini"/>
+    <item android:id="@+id/sedan"
+          android:title="@string/sedan"
+          android:icon="@drawable/sedan"/>
+
+    <item android:id="@+id/auto"
+          android:title="@string/auto"
+          android:icon="@drawable/auto"/>
+    <item android:id="@+id/rentals"
+          android:title="@string/rentals"
+          android:icon="@drawable/rent"
+          android:layout_height="wrap_content"/>
+</menu>

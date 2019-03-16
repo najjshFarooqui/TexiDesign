@@ -32,8 +32,6 @@
         </activity>
         <activity android:name=".SuccessActivity">
         </activity>
-        <activity android:name=".HomeActivity">
-        </activity>
 
         <!--
              The API key for Google Maps-based APIs is defined as a string resource.
@@ -50,6 +48,10 @@
         <activity
                 android:name=".MapsActivity"
                 android:label="@string/title_activity_maps">
+        </activity>
+        <activity android:name=".ScreenSlidePagerActivity">
+        </activity>
+        <activity android:name=".BottomSheet">
         </activity>
     </application>
 

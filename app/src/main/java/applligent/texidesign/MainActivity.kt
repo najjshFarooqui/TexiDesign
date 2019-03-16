@@ -20,7 +20,7 @@ class MainActivity : AppCompatActivity() {
         }
         val number: EditText = findViewById(R.id.etNumber)
         number.setOnClickListener {
-            val intent = Intent(this@MainActivity, NumberActivity::class.java)
+            val intent = Intent(this@MainActivity, BottomSheet::class.java)
 
             startActivity(intent)
         }

@@ -8,9 +8,7 @@
     <ImageView android:layout_width="35dp"
                android:layout_height="30dp"
                android:id="@+id/countryIcon"
-               android:padding="5dp"
-               android:layout_marginLeft="10dp"
-               android:layout_marginTop="2dp"
+               android:layout_marginTop="8dp"
                android:layout_alignParentLeft="true"
                android:layout_alignParentTop="true"/>
 

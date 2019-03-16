@@ -41,8 +41,8 @@ class CustomAdapter(val userList: ArrayList<Countries>) : RecyclerView.Adapter<C
             textViewCode.text = countries.code
             when (textViewCode.text) {
                 "+91" -> imageFlag.setBackgroundResource(R.drawable.india)
-                "+92" -> imageFlag.setBackgroundResource(R.drawable.pak)
-                "+08" -> imageFlag.setBackgroundResource(R.drawable.aus)
+                "+92" -> imageFlag.setBackgroundResource(R.drawable.pakistan)
+                "+08" -> imageFlag.setBackgroundResource(R.drawable.australia)
                 "+02" -> imageFlag.setBackgroundResource(R.drawable.canada)
             }
 
