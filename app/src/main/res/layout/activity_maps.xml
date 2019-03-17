@@ -11,8 +11,10 @@
                 android:id="@+id/container"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent">
+
             <include layout="@layout/tool_bar"
                      android:id="@+id/tBar"/>
+
             <RelativeLayout android:layout_width="wrap_content"
                             android:layout_below="@+id/tBar"
                             android:id="@+id/mapView"
@@ -93,16 +95,8 @@
             </LinearLayout>
 
             -->
-            <android.support.design.widget.BottomNavigationView
-                    android:id="@+id/navigation"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_alignParentBottom="true"
-                    app:itemIconSize="26dp"
-                    app:menu="@menu/botton_view"
-                    android:background="@color/colorPrimary"
-                    app:itemTextColor="@color/bottom_nav_color"
-                    app:itemIconTint="@color/bottom_nav_color"/>
+            <include layout="@/"
+                     android:id="@+id/tBar"/>
 
 
         </RelativeLayout>

@@ -10,7 +10,7 @@
     <color name="terms">#1247ee</color>
 
     <color name="checked">#D4DB28</color>
-    <color name="unchecked">#000</color>
+    <color name="unchecked">#FFFFFF</color>
 
 
 </resources>

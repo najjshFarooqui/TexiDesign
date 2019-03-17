@@ -12,8 +12,8 @@
                android:layout_height="120dp"
                android:src="@drawable/ola"/>
 
-    <ImageView android:layout_width="match_parent"
-               android:layout_height="285dp"
+    <ImageView android:layout_width="442dp"
+               android:layout_height="254dp"
                android:src="@drawable/icon"/>
 
     <TextView android:layout_width="wrap_content"
@@ -32,16 +32,26 @@
     <LinearLayout android:layout_width="match_parent"
                   android:layout_height="wrap_content"
                   android:orientation="horizontal">
+
+        <ImageView android:layout_width="40dp"
+                   android:layout_height="50dp"
+                   android:src="@drawable/india"/>
+
         <TextView android:layout_width="wrap_content"
                   android:layout_height="wrap_content"
                   android:text="+91"
-                  android:background="#EEEEEE"
+                  android:textColor="@color/textColorNormal"
+                  android:textSize="24sp"
+                  android:background="?android:attr/selectableItemBackground"
                   android:id="@+id/tvCountry"/>
+
 
         <EditText
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:hint="Your Number"
+                android:textSize="24sp"
+                android:textColor="@color/textColorNormal"
                 android:id="@+id/etNumber"/>
 
 

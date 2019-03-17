@@ -1,56 +1,50 @@
 <?xml version="1.0" encoding="utf-8"?>
-<android.support.v7.widget.Toolbar
-        xmlns:android="http://schemas.android.com/apk/res/android"
-        android:layout_width="match_parent"
-        android:id="@+id/toolbar"
-        android:theme="@style/ThemeOverlay.AppCompat.ActionBar"
-        android:layout_height="wrap_content">
-
-    <RelativeLayout android:layout_width="match_parent"
-                    android:layout_margin="8dp"
-                    android:layout_height="wrap_content">
-
-        <ImageView android:layout_width="16dp"
-                   android:layout_height="wrap_content"
-                   android:id="@+id/menuIcon"
-                   android:layout_alignParentLeft="true"
-                   android:background="@drawable/ic_menu"/>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:layout_width="match_parent"
+              android:layout_height="wrap_content"
+              android:orientation="horizontal">
 
 
-        <TextView android:layout_width="wrap_content"
-                  android:textSize="16sp"
-                  android:id="@+id/rides"
-                  android:text="Daily Rides"
-                  android:layout_toRightOf="@id/menuIcon"
-                  android:layout_marginLeft="24dp"
-                  android:textColor="@color/textColorNormal"
-                  android:layout_height="wrap_content" android:layout_alignParentTop="true"
+    <ImageView
+            android:id="@+id/menu"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:padding="13dp"
+            android:src="@drawable/ic_menu"/>
+
+
+    <Button
+            android:id="@+id/rides"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@null"
+            android:textSize="10sp"
+            android:padding="13dp"
+            android:text="Daily rides"
         />
-        <TextView android:layout_width="wrap_content"
-                  android:textSize="16sp"
-                  android:text="Rentals"
-                  android:id="@+id/rentals"
-                  android:layout_toRightOf="@+id/rides"
-                  android:textColor="@color/textColorNormal"
-                  android:layout_marginLeft="32dp"
-                  android:layout_height="wrap_content"/>
 
-        <TextView android:layout_width="wrap_content"
-                  android:textSize="16sp"
-                  android:text="Outstations"
-                  android:id="@+id/outstations"
-                  android:layout_height="wrap_content"
-                  android:textColor="@color/textColorNormal"
-                  android:layout_toRightOf="@+id/rentals"
-                  android:layout_marginLeft="24dp"/>
+    <Button
+            android:id="@+id/rentals"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/textColorNormal"
+            android:textSize="10sp"
+            android:background="@null"
+            android:padding="13dp"
+            android:text="Daily rides"/>
 
+    <Button
+            android:id="@+id/outstations"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@null"
+            android:textSize="10sp"
+            android:padding="13dp"
+            android:text="Daily rides"/>
+    <ImageView android:layout_width="wrap_content"
+               android:layout_height="wrap_content"
+               android:id="@+id/notification"
+               android:padding="13dp"
+               android:src="@drawable/ic_notification"/>
+</LinearLayout>
 
-        <ImageView android:layout_width="wrap_content"
-                   android:src="@drawable/ic_notification"
-                   android:id="@+id/notifications"
-                   android:layout_alignParentEnd="true"
-                   android:layout_height="wrap_content"/>
-    </RelativeLayout>
-
-
-</android.support.v7.widget.Toolbar>

@@ -9,7 +9,7 @@
 
     <RelativeLayout android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:layout_marginTop="32dp">
+                    android:layout_margin="16">
 
         <ImageView
                 android:layout_width="wrap_content"
@@ -28,7 +28,6 @@
                 android:text="please enter your mobile \nnumber to proceed"
                 android:textStyle="normal"
                 android:textColor="@color/textColorNormal"
-
                 android:textSize="24sp"/>
 
         <EditText
@@ -37,6 +36,7 @@
                 android:layout_height="wrap_content"
                 android:hint="Your Number"
                 android:inputType="phone"
+                android:layout_marginTop="16dp"
                 android:textColor="@color/textColorNormal"
                 android:id="@+id/etNumber"/>
 
