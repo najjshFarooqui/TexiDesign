@@ -29,4 +29,55 @@
 
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="title_activity_home_page">HomePage</string>
+    <string name="title_home">Home</string>
+    <string name="title_dashboard">Dashboard</string>
+    <string name="title_notifications">Notifications</string>
+
+
+    <!--  main activity -->
+    <string name="welcome">welcome</string>
+    <string name="please_enter_num">please enter your mobile number \nto get started</string>
+    <string name="next_btn">Next</string>
+
+
+    <!--create account activity-->
+    <string name="create_acc_label">Create your eSawari account with</string>
+
+
+    <!-- otp activity -->
+    <string name="opt_label">your OTP number</string>
+    <string name="sent_to">sent to</string>
+    <string name="verify_time">auto verifying OTP in</string>
+    <string name="reg_button">Register</string>
+    <string name="remaining_time">00:15</string>
+    <string name="warning_label">please enter correct OTP</string>
+
+    <!-- success activity -->
+    <string name="continue_text">CONTINUE</string>
+
+
+    <!-- Home activity -->
+    <string name="daily_rides">Daily Rides</string>
+    <string name="events">Events</string>
+    <string name="outstations">Outstations</string>
+    <string name="loading">Loading</string>
+
+
+    <!-- hints in edit texts -->
+    <string name="number_hint">Your number</string>
+    <string name="otp_hint">0</string>
+    <string name="phone_number">+91 9876543210</string>
+    <string name="terms_and_conditions">eSawari\'s Terms and Conditions</string>
+    <string name="your_rides">Your rides</string>
+    <string name="track_my_location">Track my location</string>
+    <string name="wallet">Wallet</string>
+    <string name="settings">Settings</string>
+    <string name="help">Help</string>
+    <string name="about">About</string>
+    <string name="free_rides">Free rides</string>
+    <string name="user_name">User Name</string>
+    <string name="become_a_partner">Become a partner</string>
+
+
 </resources>

@@ -20,24 +20,28 @@
 
         <TextView android:layout_width="wrap_content"
                   android:layout_height="wrap_content"
-                  android:text="Create your account "
-                  android:textSize="24sp"
-                  android:textColor="#000"
+                  android:text="@string/create_acc_label"
+                  android:textSize="@dimen/_22sdp"
+                  android:textColor="@color/colorPrimaryDark"
                   android:layout_marginTop="24dp"
-                  android:layout_below="@+id/backBtn"
                   android:id="@+id/tvNumber"/>
+        <TextView android:layout_width="wrap_content"
+                  android:layout_height="wrap_content"
+                  android:text="@string/phone_number"
+                  android:textSize="@dimen/_22sdp"
+                  android:textColor="@color/colorPrimaryDark"
+                  android:id="@+id/phone_num"/>
 
         <EditText android:layout_width="match_parent"
                   android:layout_height="wrap_content"
                   android:id="@+id/etName"
-                  android:layout_below="@+id/tvNumber"
+                  android:layout_marginTop="@dimen/_24sdp"
                   android:hint="Full Name"/>
 
         <EditText android:layout_width="match_parent"
                   android:layout_height="wrap_content"
                   android:layout_marginTop="10dp"
                   android:inputType="textEmailAddress"
-                  android:layout_below="@+id/etName"
                   android:id="@+id/etEmail"
                   android:hint="Email(Optional)"/>
         <EditText android:layout_width="match_parent"
@@ -52,24 +56,31 @@
                   android:layout_marginTop="16dp"
                   android:id="@+id/text"
                   android:layout_below="@+id/etCode"
-                  android:text="By registering, you are agreeing to"
-        />
+                  android:text="By registering, you are agreeing to"/>
         <TextView android:layout_width="wrap_content"
                   android:layout_height="wrap_content"
                   android:layout_marginTop="4dp"
                   android:id="@+id/olaConditions"
-                  android:text="Ola's Terms and Conditions"
+                  android:text="@string/terms_and_conditions"
                   android:textColor="@color/terms"
                   android:layout_below="@+id/text"/>
+
+
     </LinearLayout>
-
-
-    <Button android:layout_width="match_parent"
+    <Button android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:id="@+id/regButton"
+            android:text="@string/reg_button"
+            android:id="@+id/btn_reg"
+            android:background="@drawable/rectangular_curved"
+            android:textColor="@color/colorPrimary"
+            android:paddingLeft="@dimen/_100sdp"
+            android:paddingRight="@dimen/_100sdp"
+            android:paddingTop="@dimen/_5sdp"
+            android:paddingBottom="@dimen/_5sdp"
+            android:layout_marginBottom="0dp"
             android:layout_alignParentBottom="true"
-            android:background="@color/buttonColor"
-            android:textColor="@color/btnTextColor"
-            android:text="Register"/>
+            android:layout_centerHorizontal="true"
+            android:textSize="@dimen/_24sdp"/>
+
 
 </RelativeLayout>

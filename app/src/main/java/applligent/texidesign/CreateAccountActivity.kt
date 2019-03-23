@@ -27,7 +27,7 @@ class CreateAccountActivity : AppCompatActivity() {
         name = findViewById(R.id.etName)
         email = findViewById(R.id.etEmail)
         referralCode = findViewById(R.id.etCode)
-        regButton = findViewById(R.id.regButton)
+        regButton = findViewById(R.id.btn_reg)
         name.addTextChangedListener(object : TextWatcher {
 
             override fun onTextChanged(s: CharSequence, start: Int, before: Int, count: Int) {
@@ -50,12 +50,11 @@ class CreateAccountActivity : AppCompatActivity() {
                 s: CharSequence, start: Int, count: Int,
                 after: Int
             ) {
-                // TODO Auto-generated method stub
 
             }
 
             override fun afterTextChanged(s: Editable) {
-                // TODO Auto-generated method stub
+
 
             }
         }

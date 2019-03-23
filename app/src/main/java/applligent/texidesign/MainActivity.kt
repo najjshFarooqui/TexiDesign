@@ -12,15 +12,15 @@ class MainActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
 
-        val countryTv: TextView = findViewById(R.id.tvCountry)
+        val countryTv: TextView = findViewById(R.id.tv_country)
         countryTv.setOnClickListener {
-            val intent = Intent(this@MainActivity, NumberActivity::class.java)
+            val intent = Intent(this@MainActivity, RegisterNumberActivity::class.java)
 
             startActivity(intent)
         }
-        val number: EditText = findViewById(R.id.etNumber)
+        val number: EditText = findViewById(R.id.et_number)
         number.setOnClickListener {
-            val intent = Intent(this@MainActivity, MapsActivity::class.java)
+            val intent = Intent(this@MainActivity, RegisterNumberActivity::class.java)
 
             startActivity(intent)
         }

@@ -1,8 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
               xmlns:app="http://schemas.android.com/apk/res-auto"
               android:id="@+id/bottom_sheet"
               android:layout_width="match_parent"
-              android:layout_height="wrap_content"
+              android:layout_height="340dp"
               android:background="@android:color/darker_gray"
               android:orientation="vertical"
               app:behavior_hideable="true"
@@ -11,18 +12,15 @@
 
     <TextView
             android:layout_width="match_parent"
-            android:layout_height="40dp"
-            android:background="@color/colorAccent"
+            android:layout_height="@dimen/_60sdp"
             android:gravity="center"
-            android:text="Select Your country"
-            android:textColor="@android:color/white"/>
+            android:background="#ffff"
+            android:text="select vehicle"
 
-    <android.support.v7.widget.RecyclerView
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:id="@+id/countryView"
-            android:layout_below="@+id/yyy"
-            android:background="#efe2f6"/>
+            android:textColor="@android:color/black"/>
 
+    <android.support.v7.widget.RecyclerView android:layout_width="match_parent"
+                                            android:layout_height="wrap_content"
+                                            android:id="@+id/cabs"/>
 
 </LinearLayout>

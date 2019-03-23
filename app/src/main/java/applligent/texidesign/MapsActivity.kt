@@ -1,16 +1,19 @@
 package applligent.texidesign
 
 
-import android.content.Context
 import android.os.Bundle
 import android.support.v4.view.GravityCompat
 import android.support.v4.widget.DrawerLayout
 import android.support.v7.app.AppCompatActivity
-import android.view.Gravity
+import android.support.v7.widget.LinearLayoutManager
+import android.support.v7.widget.RecyclerView
 import android.view.LayoutInflater
 import android.view.MenuItem
+import android.view.View
 import android.widget.Button
 import android.widget.ImageView
+import android.widget.LinearLayout
+import android.widget.TextView
 import com.google.android.gms.maps.CameraUpdateFactory
 import com.google.android.gms.maps.GoogleMap
 import com.google.android.gms.maps.OnMapReadyCallback
@@ -20,10 +23,13 @@ import com.google.android.gms.maps.model.MarkerOptions
 
 
 class MapsActivity : AppCompatActivity(), OnMapReadyCallback {
-    lateinit var context: Context
+
 
     private var mMap: GoogleMap? = null
     private lateinit var drawerLayout: DrawerLayout
+    lateinit var adapter: TaxiSelectAdapter
+    lateinit var continueButton: Button
+    lateinit var linearButtonLayout: LinearLayout
 
 
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -33,18 +39,36 @@ class MapsActivity : AppCompatActivity(), OnMapReadyCallback {
             .findFragmentById(R.id.map) as SupportMapFragment?
         mapFragment!!.getMapAsync(this)
 
-        val view = LayoutInflater.from(context).inflate(R.layout.tool_bar, null, false)
-        val rides = view.findViewById(R.id.rides) as Button
-        val rentals = view.findViewById(R.id.rentals) as Button
-        val outstations = view.findViewById(R.id.outstations) as Button
+        val view = LayoutInflater.from(applicationContext).inflate(R.layout.tool_bar, null, false)
+        val rides = view.findViewById(R.id.rides) as TextView
+        val rentals = view.findViewById(R.id.rentals) as TextView
+        val outstations = view.findViewById(R.id.outstations) as TextView
         val menu = view.findViewById(R.id.menu) as ImageView
         val notifications = view.findViewById(R.id.notification) as ImageView
         val navBar = findViewById(R.id.drawer_layout) as DrawerLayout
-        menu.setOnClickListener {
-            navBar.openDrawer(Gravity.LEFT);
+        continueButton = findViewById(R.id.btn_continue)
+        linearButtonLayout = findViewById(R.id.buttons)
+
+
+        val includedLayout = findViewById(R.id.cab_selector) as View
+
+        val taxiView: RecyclerView = includedLayout.findViewById(R.id.cabs)
+
+
+        taxiView.layoutManager = LinearLayoutManager(this, LinearLayout.VERTICAL, false)
+
+        val taxies = ArrayList<Taxies>()
+        taxies.add(Taxies("mini", "+91"))
+        taxies.add(Taxies("micro", "+92"))
+        taxies.add(Taxies("Auto", "+08"))
+        taxies.add(Taxies("Sedan", "+02"))
+        adapter = TaxiSelectAdapter(taxies)
+        taxiView.adapter = adapter
+        continueButton.setOnClickListener {
+            continueButton.visibility = View.INVISIBLE
+            linearButtonLayout.visibility = View.VISIBLE
+            includedLayout.visibility = View.VISIBLE
         }
-
-
     }
 
     override fun onMapReady(googleMap: GoogleMap) {

@@ -1,10 +1,9 @@
-<layout>
+
     <android.support.v4.widget.DrawerLayout xmlns:android="http://schemas.android.com/apk/res/android"
                                             xmlns:app="http://schemas.android.com/apk/res-auto"
                                             android:id="@+id/drawer_layout"
                                             android:layout_width="match_parent"
-                                            android:layout_height="match_parent"
-                                            android:background="@android:color/holo_green_dark">
+                                            android:layout_height="match_parent">
 
 
         <RelativeLayout
@@ -36,9 +35,9 @@
 
                         <android.support.v7.widget.SearchView
                                 android:id="@+id/pick"
+                                android:background="@drawable/search"
                                 android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
-                                android:background="#FAFAFA"
                                 app:iconifiedByDefault="false"
                                 app:searchIcon="@null"
                                 android:layout_marginTop="4dp"
@@ -50,7 +49,7 @@
                                 android:id="@+id/drop"
                                 android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
-                                android:background="#FAFAFA"
+                                android:background="@drawable/search"
                                 app:iconifiedByDefault="false"
                                 app:searchIcon="@null"
                                 app:queryHint="Enter drop location"
@@ -58,45 +57,75 @@
                                 android:layout_marginLeft="8dp"
                                 android:layout_marginRight="8dp"
                                 android:layout_below="@+id/pick"/>
-
                     </RelativeLayout>
                 </fragment>
+
+                <LinearLayout
+                        android:id="@+id/buttons"
+                        android:layout_width="match_parent"
+                        android:orientation="horizontal"
+                        android:layout_alignParentBottom="true"
+                        android:layout_weight="1"
+                        android:visibility="gone"
+                        android:layout_height="wrap_content">
+
+
+                    <Button android:layout_weight="0.4"
+                            android:layout_width="0dp"
+                            android:text="Ride later"
+                            android:textColor="@color/colorPrimary"
+                            android:background="@drawable/rectangular_curved"
+                            android:layout_height="match_parent"/>
+
+                    <Button android:layout_weight="0.4"
+                            android:layout_width="0dp"
+                            android:text="Ride now"
+                            android:textColor="@color/colorPrimary"
+                            android:background="@drawable/rectangular_curved"
+                            android:layout_height="match_parent"/>
+                </LinearLayout>
+                <android.support.design.widget.CoordinatorLayout
+                        xmlns:android="http://schemas.android.com/apk/res/android"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_above="@+id/btn_continue">
+
+                    <include
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            layout="@layout/cab_selector"
+                            android:id="@+id/cab_selector"
+                            android:layout_margin="@dimen/_8sdp"
+                            android:visibility="gone"
+                            android:layout_marginBottom="@dimen/_1sdp"/>
+
+                </android.support.design.widget.CoordinatorLayout>
+
+
+                <include
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        layout="@layout/cab_selector"
+                        android:id="@+id/cab_selector"
+                        android:layout_margin="@dimen/_8sdp"
+                        android:layout_above="@+id/btn_continue"
+                        android:visibility="gone"
+                        android:layout_marginBottom="@dimen/_1sdp"/>
+
+
+                <Button android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/btn_continue"
+                        android:background="@drawable/rectangular_curved"
+                        android:layout_alignParentBottom="true"
+                        android:text="@string/continue_text"
+                        android:textColor="@color/colorPrimary"
+                        android:paddingTop="@dimen/_4sdp"
+                        android:textSize="@dimen/_24sdp"
+                        android:paddingBottom="@dimen/_4sdp"/>
+
+
             </RelativeLayout>
-
-
-            <!--
-
-            <LinearLayout
-                    android:orientation="horizontal"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_alignParentBottom="true"
-                    android:id="@+id/btnLayout"
-                    android:weightSum="1">
-                <Button
-                        android:background="@color/buttonColor"
-                        android:textColor="@color/btnTextColor"
-                        android:layout_width="0dp"
-                        android:id="@+id/rideLaterBtn"
-                        android:layout_weight="0.5"
-                        android:layout_height="50dp"
-                        android:text="@string/map_btn1"
-                        android:layout_gravity="center"/>
-
-                <Button
-                        android:background="@color/buttonColor"
-                        android:textColor="@color/btnTextColor"
-                        android:layout_width="0dp"
-                        android:layout_height="50dp"
-                        android:layout_weight="0.5"
-                        android:layout_gravity="center"
-                        android:text="@string/map_btn2"
-                        android:id="@+id/rideNowBtn"/>
-            </LinearLayout>
-
-            -->
-            <include layout="@/"
-                     android:id="@+id/tBar"/>
 
 
         </RelativeLayout>
@@ -113,7 +142,7 @@
 
 
     </android.support.v4.widget.DrawerLayout>
-</layout>
+
 
 
 

@@ -9,7 +9,7 @@ import android.text.Editable
 import android.text.TextWatcher
 import android.widget.*
 
-class BottomSheet : AppCompatActivity() {
+class RegisterNumberActivity : AppCompatActivity() {
     lateinit var etNumber: EditText
     lateinit var adapter: CustomAdapter
     lateinit var nxtButton: Button
@@ -17,9 +17,9 @@ class BottomSheet : AppCompatActivity() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_bottom_sheet)
+        setContentView(R.layout.activity_register_number)
         val countryView: RecyclerView = findViewById(R.id.countryView)
-        etNumber = findViewById(R.id.etNumber)
+        etNumber = findViewById(R.id.et_number)
         nxtButton = findViewById(R.id.nxtButton)
         tvBanner = findViewById(R.id.tvBanner)
         countryView.layoutManager = LinearLayoutManager(this, LinearLayout.VERTICAL, false)
@@ -80,14 +80,16 @@ class BottomSheet : AppCompatActivity() {
 
 
         nxtButton.setOnClickListener {
-            val intent = Intent(this@BottomSheet, MapsActivity::class.java)
-
+            val intent = Intent(this@RegisterNumberActivity, OtpScreen::class.java)
+            intent.putExtra("number", etNumber.text.toString())
             startActivity(intent)
 
         }
+
+
         val back: ImageView = findViewById(R.id.back)
         back.setOnClickListener {
-            val intent = Intent(this@BottomSheet, MapsActivity::class.java)
+            val intent = Intent(this@RegisterNumberActivity, MapsActivity::class.java)
             intent.putExtra("getNumber", etNumber.text.toString())
             startActivity(intent)
 

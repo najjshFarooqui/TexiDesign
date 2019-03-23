@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_height="match_parent"
+        android:layout_width="match_parent"
+        android:layout_margin="16dp"
+        android:orientation="vertical">
+
+    <RelativeLayout android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="64dp"
+                    android:orientation="horizontal">
+        <TextView android:layout_width="wrap_content"
+                  android:layout_height="wrap_content"
+                  android:textSize="@dimen/medium_text_size"
+                  android:textColor="@color/colorPrimaryDark"
+                  android:id="@+id/textLabel"
+                  android:text="@string/opt_label"/>
+        <TextView android:layout_width="wrap_content"
+                  android:layout_height="wrap_content"
+                  android:layout_below="@+id/textLabel"
+                  android:layout_marginTop="@dimen/_8sdp"
+                  android:textSize="@dimen/medium_text_size"
+                  android:text="@string/sent_to"
+                  android:textColor="@color/colorPrimaryDark"
+                  android:id="@+id/num_label"/>
+
+        <TextView android:layout_width="wrap_content"
+                  android:layout_height="wrap_content"
+                  android:id="@+id/number"
+                  android:layout_below="@+id/textLabel"
+                  android:layout_marginTop="@dimen/_8sdp"
+                  android:textSize="@dimen/medium_text_size"
+                  android:layout_toRightOf="@id/num_label"/>
+    </RelativeLayout>
+
+    <LinearLayout android:layout_width="wrap_content"
+                  android:orientation="horizontal"
+                  android:layout_marginTop="24dp"
+                  android:layout_gravity="center_horizontal"
+                  android:layout_height="wrap_content">
+
+
+        <EditText android:layout_width="50dp"
+                  android:layout_height="50dp"
+                  android:textColor="@color/colorPrimaryDark"
+                  android:maxLength="1"
+                  android:inputType="number"
+                  android:hint="@string/otp_hint"
+                  android:id="@+id/et1"/>
+        <EditText android:layout_width="50dp"
+                  android:layout_height="50dp"
+                  android:maxLength="1"
+                  android:inputType="number"
+                  android:textColor="@color/colorPrimaryDark"
+                  android:layout_marginLeft="10dp"
+                  android:hint="@string/otp_hint"
+                  android:id="@+id/et2"/>
+        <EditText android:layout_width="50dp"
+                  android:layout_height="50dp"
+                  android:maxLength="1"
+                  android:inputType="number"
+                  android:textColor="@color/colorPrimaryDark"
+                  android:layout_marginLeft="10dp"
+                  android:hint="@string/otp_hint"
+                  android:id="@+id/et3"/>
+        <EditText android:layout_width="50dp"
+                  android:layout_height="50dp"
+                  android:id="@+id/et4"
+                  android:inputType="number"
+                  android:textColor="@color/colorPrimaryDark"
+                  android:layout_marginLeft="10dp"
+                  android:hint="@string/otp_hint"
+                  android:maxLength="1"/>
+
+
+    </LinearLayout>
+    <TextView android:layout_width="wrap_content"
+              android:layout_height="wrap_content"
+              android:id="@+id/warning_label"
+              android:layout_marginTop="8dp"
+              android:textSize="@dimen/def_text_size"
+              android:textColor="@color/colorPrimaryDark"
+              android:text="@string/verify_time"/>
+
+    <TextView android:layout_width="wrap_content"
+              android:layout_height="wrap_content"
+              android:layout_marginTop="4dp"
+              android:textSize="@dimen/def_text_size"
+              android:textColor="@color/colorPrimaryDark"
+              android:text="@string/remaining_time"
+              android:id="@+id/remaining_time"/>
+
+
+</LinearLayout>

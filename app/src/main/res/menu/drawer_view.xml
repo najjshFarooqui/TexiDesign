@@ -2,31 +2,45 @@
 <menu xmlns:android="http://schemas.android.com/apk/res/android">
     <group android:checkableBehavior="single">
         <item
-                android:id="@+id/ola_pass"
-                android:icon="@drawable/ola_pass"
-                android:title="ola pass"/>
+                android:id="@+id/your_rides"
+                android:title="@string/your_rides"/>
         <item
-                android:id="@+id/share_pass"
-                android:icon="@drawable/ic_chrome_reader_mode_black_24dp"
-                android:title="Share pass"/>
+                android:id="@+id/track_location"
+                android:icon="@drawable/india"
+                android:title="@string/track_my_location"/>
         <item
-                android:id="@+id/book_rides"
-                android:icon="@drawable/choose_ride"
-                android:title="Book Your Ride"/>
-
+                android:id="@+id/wallet"
+                android:icon="@drawable/pakistan"
+                android:title="@string/wallet"/>
 
         <item
-                android:id="@+id/ola_pass"
-                android:icon="@drawable/ola_pass"
-                android:title="ola pass"/>
-        <item
-                android:id="@+id/share_pass"
-                android:icon="@drawable/ic_chrome_reader_mode_black_24dp"
-                android:title="Share pass"/>
-        <item
-                android:id="@+id/book_rides"
+                android:id="@+id/free_rides"
                 android:icon="@drawable/choose_ride"
-                android:title="Book Your Ride"/>
+                android:title="@string/free_rides"/>
+
+        <item
+                android:id="@+id/settings"
+                android:icon="@drawable/canada"
+                android:title="@string/settings"/>
+        <item
+                android:id="@+id/help"
+                android:icon="@drawable/help"
+                android:title="@string/help"/>
+
+        <item
+                android:id="@+id/about"
+                android:icon="@drawable/about"
+                android:title="@string/about"/>
+
+        <View android:background="#ffffff"
+              android:layout_width="match_parent"
+              android:layout_height="1dp"/>
+
+
+        <include layout="@layout/nav_footer"
+                 android:id="@+id/tBar"/>
+
+
     </group>
 
 

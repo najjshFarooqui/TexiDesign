@@ -5,14 +5,14 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:orientation="vertical"
-        android:layout_margin="20dp"
+        android:layout_margin="16dp"
         tools:context=".SuccessActivity">
 
-    <ImageView android:layout_width="wrap_content"
-               android:layout_height="wrap_content"
+    <ImageView android:layout_width="50dp"
+               android:layout_height="50dp"
                android:layout_gravity="center_horizontal"
-               android:layout_marginTop="80dp"
-               android:background="@drawable/round_button"
+               android:layout_marginTop="100dp"
+               android:background="@drawable/round_btn"
                android:src="@drawable/ic_check"/>
 
     <TextView android:layout_width="wrap_content"
@@ -33,10 +33,11 @@
 
     <TextView android:layout_width="wrap_content"
               android:textSize="32sp"
-              android:text="CONTINUE"
+              android:text="@string/continue_text"
               android:layout_marginTop="32dp"
-              android:textColor="#334cff"
-              android:id="@+id/tvContinue"
+              android:textColor="@color/continue_btn_text"
+              android:id="@+id/button_continue"
               android:layout_gravity="center_horizontal"
+              android:background="@null"
               android:layout_height="wrap_content"/>
 </LinearLayout>

@@ -1,16 +1,22 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <color name="colorPrimary">#BDBDBD</color>
-    <color name="colorPrimaryDark">#FFFFFF</color>
+    <color name="colorPrimary">#FFFFFF</color>
+    <color name="colorPrimaryDark">#1E1A17</color>
     <color name="colorAccent">#000</color>
-    <color name="buttonColor">#202020</color>
-    <color name="btnTextColor">#D4DB28</color>
+    <color name="button_color">#202020</color>
+    <color name="button_text_color">#D4DB28</color>
     <color name="textColorNormal">#000</color>
     <color name="recyclerColor">#e1c4f2</color>
     <color name="terms">#1247ee</color>
-
+    <color name="continue_btn_text">#334cff</color>
     <color name="checked">#D4DB28</color>
     <color name="unchecked">#FFFFFF</color>
+    <color name="warning_color">#FFF50004</color>
+    <color name="button">#1E1A17</color>
+
+
+    <color name="colorLightBlack">#BA17191E</color>
+    <color name="colorDarkBlack">#E8000000</color>
 
 
 </resources>

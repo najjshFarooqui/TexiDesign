@@ -1,50 +1,90 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-              android:layout_width="match_parent"
-              android:layout_height="wrap_content"
-              android:orientation="horizontal">
 
 
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                android:layout_width="wrap_content"
+                android:paddingTop="@dimen/_10sdp"
+                android:layout_height="@dimen/_60sdp">
     <ImageView
             android:id="@+id/menu"
-            android:layout_width="50dp"
-            android:layout_height="50dp"
-            android:padding="13dp"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:paddingTop="@dimen/_12sdp"
+            android:paddingBottom="@dimen/_10sdp"
+            android:layout_alignParentStart="true"
             android:src="@drawable/ic_menu"/>
+    <LinearLayout android:layout_width="fill_parent"
+                  android:layout_marginLeft="@dimen/_40sdp"
+                  android:layout_height="wrap_content"
+                  android:orientation="horizontal"
+                  android:layout_weight="1">
 
 
-    <Button
-            android:id="@+id/rides"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:background="@null"
-            android:textSize="10sp"
-            android:padding="13dp"
-            android:text="Daily rides"
-        />
+        <TextView
+                android:id="@+id/rides"
+                android:layout_toRightOf="@+id/menu"
+                android:textSize="@dimen/_16sdp"
+                android:textColor="@color/colorPrimaryDark"
+                android:paddingTop="@dimen/_10sdp"
+                android:paddingBottom="@dimen/_10sdp"
+                android:layout_weight="0.4"
+                android:layout_width="0dp"
+                android:paddingLeft="@dimen/_5sdp"
+                android:layout_height="match_parent"
+                android:background="@drawable/button"
+                android:text="@string/daily_rides"/>
 
-    <Button
-            android:id="@+id/rentals"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:textColor="@color/textColorNormal"
-            android:textSize="10sp"
-            android:background="@null"
-            android:padding="13dp"
-            android:text="Daily rides"/>
+        <TextView
+                android:id="@+id/rentals"
+                android:layout_toRightOf="@+id/rides"
+                android:textSize="@dimen/_16sdp"
+                android:textColor="@color/colorPrimaryDark"
+                android:paddingTop="@dimen/_10sdp"
+                android:paddingBottom="@dimen/_10sdp"
+                android:layout_weight="0.3"
+                android:layout_width="0dp"
+                android:paddingLeft="@dimen/_5sdp"
+                android:layout_height="match_parent"
+                android:text="@string/rentals"/>
 
-    <Button
-            android:id="@+id/outstations"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:background="@null"
-            android:textSize="10sp"
-            android:padding="13dp"
-            android:text="Daily rides"/>
-    <ImageView android:layout_width="wrap_content"
-               android:layout_height="wrap_content"
+
+        <TextView
+                android:id="@+id/outstations"
+                android:layout_toRightOf="@+id/rentals"
+                android:textSize="@dimen/_16sdp"
+                android:textColor="@color/colorPrimaryDark"
+                android:paddingTop="@dimen/_10sdp"
+                android:paddingBottom="@dimen/_10sdp"
+                android:layout_weight="0.4"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:text="@string/outstations"/>
+
+
+        <TextView
+                android:id="@+id/loading"
+                android:layout_toRightOf="@+id/outstations"
+                android:textSize="@dimen/_16sdp"
+                android:textColor="@color/colorPrimaryDark"
+                android:paddingTop="@dimen/_10sdp"
+                android:paddingLeft="0dp"
+                android:paddingBottom="@dimen/_10sdp"
+                android:layout_weight="0.45"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:text="@string/loading"/>
+
+    </LinearLayout>
+
+
+    <ImageView android:layout_width="40dp"
+               android:layout_height="40dp"
+               android:layout_alignParentRight="true"
                android:id="@+id/notification"
-               android:padding="13dp"
+               android:paddingBottom="@dimen/_10sdp"
+               android:paddingTop="@dimen/_10sdp"
+               android:background="@color/colorPrimary"
                android:src="@drawable/ic_notification"/>
-</LinearLayout>
+</RelativeLayout>
+
 
